@@ -1,7 +1,6 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { ArrowRight, CheckCircle, Gauge, MapPinHouse } from "lucide-react";
+import { CheckCircle, Gauge, MailIcon, MapPinHouse } from "lucide-react";
 
 export default function Main() {
   return (
@@ -28,7 +27,10 @@ export default function Main() {
           </div>
         </div>
       </section>
-      <section id="keyFeatures" className="w-full flex justify-center py-12 md:py-24 lg:py-32 bg-gray-100 dark:bg-gray-800">
+      <section
+        id="keyFeatures"
+        className="w-full flex justify-center py-12 md:py-24 lg:py-32 bg-gray-100 dark:bg-gray-800"
+      >
         <div className="container px-4 md:px-6">
           <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center mb-8">
             Key Features
@@ -69,27 +71,22 @@ export default function Main() {
                 Get Your Home Verified Today{" "}
               </h2>
               <p className="max-w-[600px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
-                Give us your email, and we&lsquo;ll contact you
+                Reply time &lt; 24 hours
               </p>
             </div>
             <div className="w-full max-w-sm space-y-2">
-              <form className="flex space-x-2">
-                <Input
-                  className="max-w-lg flex-1"
-                  placeholder="Enter your email"
-                  type="email"
-                />
-                <Button type="submit">
-                  Request Help
-                  <ArrowRight className="ml-2 h-4 w-4" />
+              <a href="mailto:librizzimatteo.ml@gmail.com">
+                <Button className="mt-4 w-full gap-2">
+                  Contact us <MailIcon className="mr-2 h-4 w-4" />
                 </Button>
-              </form>
-              <p className="text-xs text-gray-500 dark:text-gray-400">
+              </a>
+
+              {/* <p className="text-xs text-gray-500 dark:text-gray-400">
                 By signing up, you agree to our{" "}
                 <Link className="underline underline-offset-2" href="#">
                   Terms & Conditions
                 </Link>
-              </p>
+              </p> */}
             </div>
           </div>
         </div>

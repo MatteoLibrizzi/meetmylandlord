@@ -5,7 +5,7 @@ import Footer from "@/components/ui/footer";
 import BasicLayour from "./basicLayout";
 
 export const metadata: Metadata = {
-  title: "MeetMyLandlord",
+  title: "CheckMyHomeOnline",
   description: "Verify your Dream Home before Committing to it",
 };
 

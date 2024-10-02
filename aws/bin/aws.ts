@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 import * as cdk from 'aws-cdk-lib';
 import 'source-map-support/register';
-import { MeetMyLandlordStack } from '../lib/aws-stack';
+import { CheckMyHomeOnlineStack } from '../lib/aws-stack';
 import * as dotenv from "dotenv";
 
 dotenv.config();
@@ -11,9 +11,9 @@ console.log(
   "Deploying to env: ",
   process.env.ENVIRONMENT === "prod" ? "prod" : "dev"
 );
-new MeetMyLandlordStack(
+new CheckMyHomeOnlineStack(
   app,
-  (process.env.ENVIRONMENT === "prod" ? "prod" : "dev") + "MeetMyLandlord",
+  (process.env.ENVIRONMENT === "prod" ? "prod" : "dev") + "CheckMyHomeOnline",
   process.env.ENVIRONMENT === "prod",
   {
     env: {

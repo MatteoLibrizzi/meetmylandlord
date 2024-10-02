@@ -21,7 +21,7 @@ import { Construct } from 'constructs'
 import { LambdaIntegration, LambdaRestApi } from 'aws-cdk-lib/aws-apigateway';
 // TODO make sure people can pay
 
-export class MeetMyLandlordStack extends cdk.Stack {
+export class CheckMyHomeOnlineStack extends cdk.Stack {
 	prod: boolean
 
 

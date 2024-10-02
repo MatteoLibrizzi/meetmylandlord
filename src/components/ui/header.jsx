@@ -27,7 +27,7 @@ export default function Component() {
           <SheetContent side="left">
             <Link href="/" prefetch={false}>
               <Handshake className="h-6 w-6" />
-              <span className="sr-only">MeetMyLandlord</span>
+              <span className="sr-only">CheckMyHomeOnline</span>
             </Link>
             <div className="grid gap-2 py-6">
               <Link
@@ -56,7 +56,7 @@ export default function Component() {
         </Sheet>
         <Link href="/" className="mr-6 hidden lg:flex" prefetch={false}>
           <Handshake className="h-6 w-6" />
-          <span className="sr-only">MeetMyLandlord</span>
+          <span className="sr-only">CheckMyHomeOnline</span>
         </Link>
         <NavigationMenu className="hidden lg:flex pl-10">
           <NavigationMenuList>
