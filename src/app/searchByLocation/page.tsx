@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
 import {
   Select,
   SelectContent,
@@ -11,7 +10,7 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Search, MapPin, Gauge } from "lucide-react";
+import { MapPin, Gauge, MailIcon } from "lucide-react";
 
 interface SearchResult {
   id: number;
@@ -22,22 +21,22 @@ interface SearchResult {
   daysToVerify: number;
 }
 
-const countries = ["Luxembourg", "other"];
+const countries = ["Luxembourg"].sort();
 
 export default function ItemSearch() {
-  const [searchTerm, setSearchTerm] = useState("");
-  const [location, setLocation] = useState("");
   const [results, setResults] = useState<SearchResult[]>([]);
+  const [didSearch, setDidSearch] = useState<boolean>(false);
 
   const handleCountryChange = (e: string) => {
+    setDidSearch(true);
     const mockResults: SearchResult[] = [
       {
         id: 1,
         name: "Matteo",
-        location: "Luxembourg",
+        location: e,
         price: 70,
         daysToVerify: 7,
-        description: "Verify any house in Luxembourg city with 7 days",
+        description: `Verify existence of any house in ${e} within 7 days. I will meet your landlord and send you videos of the house.`,
       },
     ];
     setResults(mockResults);
@@ -89,14 +88,17 @@ export default function ItemSearch() {
               <p className="flex items-center border-t-2 text-sm text-gray-600 mb-2 pt-2">
                 {result.description}
               </p>
-
-              <Button className="mt-4 w-full">Pay and Contact</Button>
+              <a href="mailto:librizzimatteo.ml@gmail.com">
+                <Button className="mt-4 w-full gap-2">
+                  Contact <MailIcon className="mr-2 h-4 w-4" />
+                </Button>
+              </a>
             </CardContent>
           </Card>
         ))}
       </div>
 
-      {results.length === 0 && (
+      {didSearch && results.length === 0 && (
         <p className="text-center text-gray-500 mt-8">
           No results found. Try searching for an item.
         </p>

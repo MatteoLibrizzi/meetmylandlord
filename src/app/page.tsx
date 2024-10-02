@@ -18,13 +18,17 @@ export default function Main() {
               </p>
             </div>
             <div className="space-x-4">
-              <Button>Get Started</Button>
-              <Button variant="outline">Learn More</Button>
+              <Link href={"/searchByLocation"}>
+                <Button>Get Started</Button>
+              </Link>
+              <a href="#keyFeatures">
+                <Button variant="outline">Learn More</Button>
+              </a>
             </div>
           </div>
         </div>
       </section>
-      <section className="w-full flex justify-center py-12 md:py-24 lg:py-32 bg-gray-100 dark:bg-gray-800">
+      <section id="keyFeatures" className="w-full flex justify-center py-12 md:py-24 lg:py-32 bg-gray-100 dark:bg-gray-800">
         <div className="container px-4 md:px-6">
           <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center mb-8">
             Key Features
