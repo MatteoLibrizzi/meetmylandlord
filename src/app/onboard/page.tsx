@@ -13,9 +13,9 @@ export default function ItemSearch() {
         </h1>
       </div>
 
-      <div className="flex flex-col">
+      <div className="flex flex-col items-center">
         <a href="mailto:librizzimatteo.ml@gmail.com">
-          <Button className="mt-4 w-full gap-2">
+          <Button className="mt-4 w-64 gap-2">
             Contact us <MailIcon className="mr-2 h-4 w-4" />
           </Button>
         </a>

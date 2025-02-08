@@ -17,7 +17,7 @@ export default function Main() {
               </p>
             </div>
             <div className="space-x-4">
-              <Link href={"/searchByLocation"}>
+              <Link href={"/locations"}>
                 <Button>Get Started</Button>
               </Link>
               <a href="#keyFeatures">
@@ -76,7 +76,7 @@ export default function Main() {
             </div>
             <div className="w-full max-w-sm space-y-2">
               <a href="mailto:librizzimatteo.ml@gmail.com">
-                <Button className="mt-4 w-full gap-2">
+                <Button className="mt-4 w-64 gap-2">
                   Contact us <MailIcon className="mr-2 h-4 w-4" />
                 </Button>
               </a>
