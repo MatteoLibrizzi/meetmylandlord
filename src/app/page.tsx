@@ -75,7 +75,7 @@ export default function Main() {
               </p>
             </div>
             <div className="w-full max-w-sm space-y-2">
-              <a href="mailto:librizzimatteo.ml@gmail.com">
+              <a href="/contact/luxembourg">
                 <Button className="mt-4 w-64 gap-2">
                   Contact us <MailIcon className="mr-2 h-4 w-4" />
                 </Button>
